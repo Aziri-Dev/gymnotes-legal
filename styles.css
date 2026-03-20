@@ -1,0 +1,128 @@
+:root {
+  --bg: #f7f5f2;
+  --paper: #fffdf9;
+  --text: #1a1714;
+  --muted: #5d5348;
+  --line: #d7ccbe;
+  --accent: #2f6d62;
+  --accent-2: #d18b3f;
+  --shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1200px 500px at 90% -10%, rgba(209,139,63,0.20), transparent 60%),
+    radial-gradient(1000px 400px at -10% 0%, rgba(47,109,98,0.18), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 18px 48px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: -8px;
+  margin-bottom: 24px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  display: block;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.legal {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.legal h1 {
+  margin-bottom: 6px;
+}
+
+.last-updated {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.legal h2 {
+  margin-top: 24px;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.legal ul {
+  padding-left: 20px;
+}
+
+.legal a {
+  color: var(--accent);
+}
+
+.top-links {
+  margin-bottom: 14px;
+}
+
+.top-links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent);
+}
+
+footer {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
